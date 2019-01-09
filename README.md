@@ -1,6 +1,6 @@
 # Vuex CLI
 
-> Vuex project example
+> Vuex project example with webpack 4
 
 ## Build Setup
 
