@@ -1,6 +1,6 @@
 # Vuex CLI
 
-> Vuex project example with webpack 4
+> Vuex Starter Kit with webpack 4 and babel 7
 
 ## Build Setup
 
