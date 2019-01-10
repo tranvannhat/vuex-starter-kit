@@ -14,7 +14,7 @@
             v-for="(task, index) in completed"
             v-bind:key="index"
           >
-            {{task.body}}
+            {{task.task_name}}
             <button
               type="button"
               @click="remove(task)"

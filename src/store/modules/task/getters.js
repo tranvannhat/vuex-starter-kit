@@ -1,6 +1,8 @@
 export default {
+	loadingScreen: state => state.loadingScreen,
+	loadingAction: state => state.loadingAction,
 	errors: state => state.errors,
 	newTask: state => state.newTask,
-	tasks: state => state.tasks.filter((task) => { return !task.completed }),
-	completedTask: state => state.tasks.filter((task) => { return task.completed })
+	listTask: state => state.listTask.filter(task => { return !task.task_status }),
+	completedTask: state => state.listTask.filter((task) => { return task.task_status })
 }

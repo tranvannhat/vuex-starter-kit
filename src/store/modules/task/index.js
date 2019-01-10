@@ -8,6 +8,8 @@ import getters from './getters';
 import mutations from './mutations';
 
 const state = {
+  loadingScreen: true,
+  loadingAction: false,
   listTask: [],
   tasks: [],
   newTask: ''

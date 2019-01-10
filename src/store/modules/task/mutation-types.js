@@ -1,3 +1,5 @@
+export const SET_LOADING_SCREEN = 'SET_LOADING_SCREEN';
+export const SET_LOADING_ACTION = 'SET_LOADING_ACTION';
 export const GET_LIST_TASK = 'GET_LIST_TASK';
 export const GET_TASK = 'GET_TASK';
 export const ADD_TASK = 'ADD_TASK';

@@ -4,7 +4,7 @@
       <div class="panel-heading my-task">
         <h3 class="panel-title">
           My Tasks
-          <span class="task-length" v-if="tasks.length > 0">{{tasks.length}}</span>
+          <span class="task-length" v-if="listTask.length > 0">{{listTask.length}}</span>
         </h3>
       </div>
       <div class="panel-body">
@@ -15,8 +15,8 @@
           leave-active-class="animated bounceOutRight"
           is="transition-group"
         >
-          <li class="list-group-item" v-for="(task, index) in tasks" v-bind:key="index">
-            {{task.body}}
+          <li class="list-group-item" v-for="(task, index) in listTask" v-bind:key="index">
+            {{task.task_name}}
             <div class="btn-group">
               <button
                 type="button"
@@ -42,10 +42,10 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
-  mounted() {
+  created() {
     this.$store.dispatch("task/getListTask");
   },
   methods: {
@@ -61,10 +61,12 @@ export default {
   },
   computed: {
     ...mapGetters({
+      loadingScreen: "task/loadingScreen",
+      loadingAction: "task/loadingAction",
       listTask: "task/listTask",
       tasks: "task/tasks",
       newTask: "task/newTask"
-    })
+    }),
   }
 };
 </script>
